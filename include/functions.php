@@ -30,7 +30,7 @@ function obfuscate($filename)                   // takes a file_path as input, r
     
     try
     {
-        $source = php_strip_whitespace($filename);
+        $source = file_get_contents($filename);
         fprintf(STDERR,"Obfuscating %s%s",$src_filename,PHP_EOL);
         //var_dump( token_get_all($source));    exit;
         if ($source==='')

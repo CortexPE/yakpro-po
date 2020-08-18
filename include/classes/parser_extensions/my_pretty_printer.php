@@ -68,6 +68,11 @@ class myPrettyprinter extends PhpParser\PrettyPrinter\Standard
         }
         return '"'.$result.'"';
     }
+
+
+    protected function pStmts(array $nodes, bool $indent = true) : string {
+        return parent::pStmts($nodes, false);
+    }
 }
 
 ?>
